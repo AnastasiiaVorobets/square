@@ -1,0 +1,13 @@
+.field {
+  display: grid;
+  margin-top: 20px;
+}
+
+.grid-square {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.grid-square.hovered {
+  background-color: lightblue;
+}

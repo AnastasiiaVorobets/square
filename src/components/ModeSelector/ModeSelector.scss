@@ -1,0 +1,14 @@
+select {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+select option {
+  background-color: #c3c3c3;
+  cursor: pointer;
+}

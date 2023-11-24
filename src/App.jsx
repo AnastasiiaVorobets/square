@@ -39,8 +39,24 @@ const App = () => {
   };
 
   const handleSquareHover = (row, col) => {
-    setHoveredSquares((prevSquares) => [...prevSquares, { row, col }]);
+    const square = { row, col };
+  
+    const isSquareHovered = hoveredSquares.some(
+      (hoveredSquare) => hoveredSquare.row === row && hoveredSquare.col === col
+    );
+  
+    if (isSquareHovered) {
+      setHoveredSquares((prevSquares) =>
+        prevSquares.filter(
+          (hoveredSquare) => hoveredSquare.row !== row || hoveredSquare.col !== col
+        )
+      );
+    }
+    else {
+      setHoveredSquares((prevSquares) => [...prevSquares, square]);
+    }
   };
+  
 
   const handleReset = () => {
     setHoveredSquares(initialHoveredSquaresState);

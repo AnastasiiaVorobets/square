@@ -7,6 +7,7 @@ const ModeSelector = ({ modes, onSelect }) => {
   const handleSelectChange = (e) => {
     const selectedModeId = e.target.value;
     setSelectedModeId(selectedModeId);
+
     const selectedMode = modes.find((mode) => mode.id === selectedModeId);
     onSelect(selectedMode);
   };
@@ -15,9 +16,9 @@ const ModeSelector = ({ modes, onSelect }) => {
     <div className='select'>
       <select onChange={handleSelectChange} value={selectedModeId}>
         <option value={''}>Pick mode</option>
-        {modes.map((mode) => (
-          <option key={mode.id} value={mode.id}>
-            {mode.name}
+        {modes.map(({ id, name }) => (
+          <option key={id} value={id}>
+            {name}
           </option>
         ))}
       </select>

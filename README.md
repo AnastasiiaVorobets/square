@@ -1,4 +1,4 @@
-- [DEMO](anastasiiavorobets.github.io/square/)
+- [DEMO](https://anastasiiavorobets.github.io/square/)
 
 ## Technologies
 - Node v16.20.2
